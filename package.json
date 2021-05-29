@@ -1,20 +1,15 @@
 {
-  "name": "smpp",
+  "name": "@jambonz/node-smpp",
   "version": "0.5.0",
   "description": "SMPP client and server implementation in node.js",
-  "homepage": "https://github.com/farhadi/node-smpp",
-  "bugs": "https://github.com/farhadi/node-smpp/issues",
-  "author": "Ali Farhadi <a.farhadi@gmail.com>",
-  "contributors": [
-    "Julián Gutiérrez <juliangut@gmail.com>"
-  ],
+  "bugs": "https://github.com/jambonz/node-smpp/issues",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=12.x"
   },
   "main": "./lib/smpp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/farhadi/node-smpp.git"
+    "url": "https://github.com/jambonz/node-smpp.git"
   },
   "license": "MIT",
   "files": [
@@ -22,16 +17,17 @@
     "index.js"
   ],
   "scripts": {
-    "cover": "istanbul cover _mocha",
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "./node_modules/.bin/nyc --reporter html --report-dir ./coverage npm run test",
+    "jslint": "eslint index.js lib"
   },
   "devDependencies": {
-    "coveralls": "^2.11.9",
-    "istanbul": "^0.4.3",
-    "mocha": "2.x"
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0"
   },
   "dependencies": {
-    "iconv-lite": "0.x",
-    "safer-buffer": ">= 2.1.2 < 3"
+    "eslint": "^7.15.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "iconv-lite": "^0.6.3"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@jambonz/node-smpp",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "SMPP client and server implementation in node.js",
   "bugs": "https://github.com/jambonz/node-smpp/issues",
   "engines": {

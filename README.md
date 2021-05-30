@@ -1,11 +1,6 @@
-node-smpp
-=========
-SMPP client and server implementation in node.js.
+# node-smpp ![Build Status](https://github.com/jambonz/node-smpp/workflows/CI/badge.svg)
 
-[![Build Status](https://travis-ci.org/farhadi/node-smpp.png)](https://travis-ci.org/farhadi/node-smpp)
-[![Dependency Status](https://david-dm.org/farhadi/node-smpp.svg)](https://david-dm.org/farhadi/node-smpp)
-[![devDependency Status](https://david-dm.org/farhadi/node-smpp/dev-status.svg)](https://david-dm.org/farhadi/node-smpp#info=devDependencies)
-[![Coverage Status](https://coveralls.io/repos/github/farhadi/node-smpp/badge.svg?branch=master)](https://coveralls.io/github/farhadi/node-smpp?branch=master)
+SMPP client and server implementation in node.js.
 
 Introduction
 ------------
@@ -23,8 +18,9 @@ for a list of available operations and their parameters.
 
 Installation
 ------------
-
+```
     npm install smpp
+```
 
 Usage
 -----
@@ -32,10 +28,7 @@ Usage
 
 ``` javascript
 var smpp = require('smpp');
-var session = smpp.connect({
-	url: 'smpp://example.com:2775',
-	auto_enquire_link_period: 10000
-});
+var session = smpp.connect('smpp://example.com:2775');
 session.bind_transceiver({
 	system_id: 'YOUR_SYSTEM_ID',
 	password: 'YOUR_PASSWORD'
